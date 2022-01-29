@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+        <g fill="#323334" fill-rule="evenodd">
+          <path
+            d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z"
+          />
+        </g>
+      </svg>
+      <svg
+        class="bar-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="16"
+      >
+        <g fill="#242942" fill-rule="evenodd">
+          <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+        </g>
+      </svg>
+      <svg
+        class="hide close"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+      >
+        <path
+          fill="#242942"
+          fill-rule="evenodd"
+          d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+        />
+      </svg>
+      <ul class="nav_list">
+        <li class="nav_item"><a href="#" class="nav_link">Product</a></li>
+        <li class="nav_item"><a href="#" class="nav_link">Features</a></li>
+        <li class="nav_item"><a href="#" class="nav_link">Pricing</a></li>
+        <li class="nav_item">
+          <a href="#" class="nav_link"><div class="circle"></div></a>
+        </li>
+        <li class="nav_item">
+          <a href="#" class="nav_link nav_login">Login</a>
+        </li>
+      </ul>
+
+      <div class="mobile-nav">
+        <ul class="mobile-nav_list">
+          <li class="mobile-nav_item">
+            <a href="#" class="mobile-nav_link">Product</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a href="#" class="mobile-nav_link">Features</a>
+          </li>
+          <li class="mobile-nav_item">
+            <a href="#" class="mobile-nav_link">Pricing</a>
+          </li>
+          <li class="mobile-nav_item login-item">
+            <a href="#" class="mobile-nav_link login-link">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero_image">
+        <img
+          class="hero-image"
+          src="./images/illustration-devices.svg"
+          alt=" mobile and laptop"
+        />
+      </div>
+      <div class="hero_text">
+        <p class="call-action-para"><span>New</span> Monograph Dashboard</p>
+        <h1>
+          Powerful insights <br />
+          into your team
+        </h1>
+        <p>
+          Project planning and time tracking <br />
+          for agile teams
+        </p>
+        <div class="hero_text_sub_container">
+          <a class="hero-text-btn" href="#">Schedule a demo</a>
+          <p class="call-action-para">to see a live preview</p>
+        </div>
+      </div>
+    </div>
+    <div class="shap"></div>
+  </body>
+</html>

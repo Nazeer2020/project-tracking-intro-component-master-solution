@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Open+Sans&display=swap");
+
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary-red: hsl(0, 100%, 68%);
+  --color-primary-light-red: hsl(0, 100%, 78%);
+  --color-neutral-Dark-Blue: hsl(230, 29%, 20%);
+  --color-neutral-Dark-Grayish-Blue: hsl(230, 11%, 40%);
+  --color-neutral-Grayish-Blue: hsl(231, 7%, 65%);
+  --color-neutral-Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-size: clamp(34px, 4vw, 64px);
+}
+
+h1,
+a {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+p {
+  color: var(--color-neutral-Dark-Grayish-Blue);
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========== navbar ===========*/
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 7%;
+}
+
+.nav_list {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 12%;
+  left: 7%;
+  right: 7%;
+  bottom: auto;
+  text-align: center;
+  padding: 0 7%;
+  box-shadow: 0 0 20px 10px rgba(#555, 0.35%);
+  border-radius: 5px;
+}
+
+.mobile-nav_item {
+  margin: 20px 0;
+}
+.nav_link,
+.mobile-nav_link {
+  color: var(--color-neutral-Dark-Blue);
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+.login-item {
+  padding-top: 20px;
+  border-top: 1px solid var(--color-neutral-Light-Grayish-Blue);
+}
+
+.nav_login,
+.login-link {
+  color: var(--color-neutral-Grayish-Blue);
+}
+
+.nav_item + .nav_item {
+  margin-left: 50px;
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-neutral-Grayish-Blue);
+}
+
+.nav_link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 2px;
+  margin-top: 20px;
+  background-color: var(--color-neutral-Dark-Blue);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.nav_login::after {
+  background-color: var(--color-neutral-Grayish-Blue);
+}
+
+/* =========== hero ===========*/
+
+.hero {
+  display: grid;
+  row-gap: 100px;
+}
+
+.hero_image {
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 150%;
+}
+
+.hero_text {
+  padding: 0 7%;
+}
+
+span {
+  background-color: var(--color-neutral-Dark-Blue);
+  color: var(--color-neutral-Light-Grayish-Blue);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 50px;
+  border-radius: 15px;
+  padding: 3px 15px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.hero_text_sub_container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.hero-text-btn {
+  display: flex;
+  height: 40px;
+  width: 40%;
+  background-color: var(--color-primary-red);
+  color: var(--color-neutral-Light-Grayish-Blue);
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 7px;
+}
+
+.call-action-para {
+  text-transform: uppercase;
+  color: var(--color-neutral-Grayish-Blue);
+}
+
+.shap {
+  position: absolute;
+  background-color: var(--color-neutral-Light-Grayish-Blue);
+  top: 0;
+  right: 0;
+  left: 48%;
+  bottom: 47%;
+  z-index: -9;
+  border-bottom-left-radius: 50px;
+}
+
+/* =========== Dom manipulation ===========*/
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.hero-text-btn:hover {
+  background-color: var(--color-primary-light-red);
+}
+
+.nav_link:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========== medai query ===========*/
+
+@media (min-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-left: 7%;
+    padding-bottom: 7%;
+    gap: 50px;
+  }
+
+  .hero_image {
+    grid-column: 2/3;
+  }
+
+  .hero_text {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 0;
+  }
+
+  .bar-btn {
+    display: none;
+  }
+
+  .nav_list {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero_text_sub_container {
+    margin: 70px 0;
+  }
+}
